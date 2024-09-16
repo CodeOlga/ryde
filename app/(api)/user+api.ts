@@ -23,7 +23,7 @@ export async function POST(request: Request) {
         ${name}
         ${email}
         ${clerkId}
-      )
+      );
   `;
 
     return new Response(JSON.stringify({ data: response }), { status: 201 });
