@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Driver, MarkerData } from "@/types/type";
 
 const directionsAPI = process.env.EXPO_PUBLIC_GOOGLE_API_KEY;
@@ -20,6 +21,7 @@ export const generateMarkersFromData = ({
       latitude: userLatitude + latOffset,
       longitude: userLongitude + lngOffset,
       title: `${driver.first_name} ${driver.last_name}`,
+      id: driver.driver_id,
       ...driver,
     };
   });
@@ -38,8 +40,8 @@ export const calculateRegion = ({
 }) => {
   if (!userLatitude || !userLongitude) {
     return {
-      latitude: 37.78825, //Adrian's
-      longitude: -122.4324, //Adrian's
+      latitude: 37.78825, //San Fran
+      longitude: -122.4324, //San Fran
       latitudeDelta: 0.01,
       longitudeDelta: 0.01,
     };
@@ -106,6 +108,7 @@ export const calculateDriverTimes = async ({
         `https://maps.googleapis.com/maps/api/directions/json?origin=${userLatitude},${userLongitude}&destination=${destinationLatitude},${destinationLongitude}&key=${directionsAPI}`
       );
       const dataToDestination = await responseToDestination.json();
+
       const timeToDestination =
         dataToDestination.routes[0].legs[0].duration.value; // Time in seconds
 
