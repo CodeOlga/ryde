@@ -6,6 +6,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 export async function POST(request: Request) {
   try {
     const body = await request.json();
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { payment_method_id, payment_intent_id, customer_id, client_secret } =
       body;
 

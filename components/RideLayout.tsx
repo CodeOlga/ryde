@@ -39,7 +39,7 @@ const RideLayout = ({
         </View>
         <BottomSheet
           ref={bottomSheetRef}
-          snapPoints={snapPoints || ["40%", "85%"]}
+          snapPoints={snapPoints || ["40%", "90%"]}
           index={0}
         >
           <BottomSheetView style={{ flex: 1, padding: 20 }}>
