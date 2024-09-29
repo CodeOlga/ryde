@@ -13,7 +13,8 @@
       "backgroundColor": "#2f80ed"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.olgakrv.uber"
     },
     "android": {
       "adaptiveIcon": {
@@ -27,10 +28,21 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
-      ["expo-router", { "origin": "https://uber.com/"}]
+      [
+        "expo-router",
+        {
+          "origin": "https://uber.com/"
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "8f857f10-a50f-4ab1-bd9e-ad90721b19d2"
+      }
+    },
+    "owner": "olgakrv"
   }
 }
