@@ -20,7 +20,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.olgakrv.uber"
     },
     "web": {
       "bundler": "metro",
@@ -43,6 +44,12 @@
         "projectId": "8f857f10-a50f-4ab1-bd9e-ad90721b19d2"
       }
     },
-    "owner": "olgakrv"
+    "owner": "olgakrv",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/8f857f10-a50f-4ab1-bd9e-ad90721b19d2"
+    }
   }
 }
